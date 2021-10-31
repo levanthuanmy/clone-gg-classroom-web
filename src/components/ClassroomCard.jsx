@@ -15,20 +15,26 @@ const ClassroomCard = ({ classroom }) => {
       </div>
     </div>
   )
+
   return (
     <div className="cus-classroom-card rounded">
-      <div className="h-50 bg-success w-100 rounded-top p-3 d-flex flex-column justify-content-between  text-white">
+      <div
+        className="h-50 w-100 rounded-top border p-3 d-flex flex-column justify-content-between text-white cus-classroom-banner"
+        style={{
+          backgroundImage: `url(${classroom.banner})`,
+          backgroundColor: classroom.themeColor,
+        }}
+      >
         <div className="text-truncate h3">{classroom?.name}</div>
-        <div
-          className="text-truncate"
-          style={{ maxWidth: "calc(100% - 6rem)" }}
-        >
+        <div className="text-truncate cus-host-name-text">
           {classroom?.host?.name}
         </div>
       </div>
-      <div className="h-50 bg-white rounded-bottom border border-top-0 p-3">
-        d
+
+      <div className="h-50 bg-white rounded-bottom border border-top-0 p-3 text-secondary">
+        <p className="cus-host-name-text">Chưa có sự kiện mới.</p>
       </div>
+
       {renderAvatar()}
     </div>
   )
