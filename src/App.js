@@ -11,7 +11,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [showMenu, setShowMenu] = useState(false)
   const [isShowModal, setIsShowModal] = useState(false)
-  const { register, handleSubmit, setValue, getValues, formState: { errors } } = useForm()
+  const { register, handleSubmit, setValue, formState: { errors } } = useForm()
   const [isReGet, setIsReGet] = useState(false)
 
   const getClassrooms = async () => {
