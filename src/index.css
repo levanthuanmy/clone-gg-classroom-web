@@ -14,13 +14,13 @@ code {
 
 .cus-classroom-card {
   cursor: pointer;
-  max-width: 25rem;
+  width: 22rem;
   height: 15rem;
   transition: all ease-in-out 0.2s;
 }
 
 .cus-classroom-card:hover {
-  box-shadow: 0 0 15px 5px rgba(100, 100, 100, 0.1);
+  box-shadow: 0 0 15px 5px rgba(100, 100, 100, 0.2);
 }
 
 .cus-classroom-card__avatar {

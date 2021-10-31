@@ -11,7 +11,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [showMenu, setShowMenu] = useState(false)
   const [isShowModal, setIsShowModal] = useState(false)
-  const { register, handleSubmit, setValue, formState: { errors } } = useForm()
+  const { register, handleSubmit, setValue, getValues, formState: { errors } } = useForm()
   const [isReGet, setIsReGet] = useState(false)
 
   const getClassrooms = async () => {
@@ -26,6 +26,7 @@ const App = () => {
 
   const createClassroom = async (body) => {
     try {
+      setIsLoading(true)
       await post(`/classrooms`, {}, body)
       setIsReGet(true)
     } catch (error) {
@@ -51,6 +52,7 @@ const App = () => {
 
   const clearInput = () => {
     setValue('name', null)
+    setValue('subject', null)
     setValue('description', null)
     setValue('banner', null)
     setValue('themeColor', null)
@@ -82,6 +84,11 @@ const App = () => {
             <Form.Label>Tên lớp học (bắt buộc)</Form.Label>
             <Form.Control type="text" placeholder="Tên lớp học" {...register("name", { required: true })} />
             {errors.name && <span className="text-danger">Bạn cần nhập tên lớp học.</span>}
+          </Form.Group>
+
+          <Form.Group className="mt-3">
+            <Form.Label>Môn học</Form.Label>
+            <Form.Control type="text" placeholder="Môn học"  {...register("subject")} />
           </Form.Group>
 
           <Form.Group className="mt-3">

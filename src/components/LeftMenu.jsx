@@ -6,8 +6,8 @@ const LeftMenu = ({ showMenu, setShowMenu }) => {
       className="cus-menu-left"
       style={
         showMenu
-          ? { width: "16rem", height: "auto" }
-          : { width: "4rem", height: "auto" }
+          ? { minWidth: "16rem", height: "auto" }
+          : { minWidth: "4rem", height: "auto" }
       }
     >
       <div

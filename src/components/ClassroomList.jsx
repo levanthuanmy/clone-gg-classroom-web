@@ -8,8 +8,8 @@ const ClassroomList = ({ showMenu, isLoading, resClassrooms }) => {
       className="m-0 pt-4 ps-4"
       style={
         showMenu
-          ? { width: "min(calc(100vw - 17rem), 107rem)" }
-          : { width: "min(calc(100vw - 4rem), 108.5rem)" }
+          ? { width: "calc(100vw - 17rem)" }
+          : { width: "calc(100vw - 4rem)" }
       }
     >
       {isLoading ? (
@@ -20,7 +20,7 @@ const ClassroomList = ({ showMenu, isLoading, resClassrooms }) => {
         </div>
       ) : (
         resClassrooms?.map((item, id) => (
-          <Col xs="12" sm="12" md="6" lg="4" xl="3" className="p-0 pe-4 pb-4">
+          <Col xs="auto" className="p-0 pe-4 pb-4">
             <ClassroomCard key={id} classroom={item} />
           </Col>
         ))
