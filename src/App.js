@@ -102,8 +102,8 @@ const App = () => {
           </Form.Group>
 
           <Form.Group className="mt-3">
-            <Form.Label>Màu chủ đề</Form.Label>
-            <Form.Control type="text" placeholder="Màu chủ đề (đang phát triển)" disabled  {...register("themeColor")} />
+            <Form.Label>Phòng học</Form.Label>
+            <Form.Control type="text" placeholder="Phòng học"  {...register("room")} />
           </Form.Group>
 
         </Modal.Body>
