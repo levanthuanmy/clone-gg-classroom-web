@@ -109,7 +109,7 @@ const App = () => {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button type="submit">Tạo</Button>
+          <Button type="submit">Tạo lớp</Button>
         </Modal.Footer>
       </Form>
     </Modal>
